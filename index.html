@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Download Our App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 10px;
+            border-radius: 25px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+        .button:hover {
+            transform: scale(1.05);
+        }
+        .ios {
+            background-color: #000000;
+        }
+        .android {
+            background-color: #689f38;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Download Our App</h1>
+        <p>Choose your platform:</p>
+        <div>
+            <a href="YOUR_APP_STORE_LINK" class="button ios">Download for iPhone</a>
+            <a href="YOUR_PLAY_STORE_LINK" class="button android">Download for Android</a>
+        </div>
+    </div>
+
+    <script>
+        // Auto-redirect based on device
+        var userAgent = navigator.userAgent.toLowerCase();
+        if (/android/i.test(userAgent)) {
+            window.location.href = "YOUR_PLAY_STORE_LINK";
+        } else if (/iphone|ipad|ipod/i.test(userAgent)) {
+            window.location.href = "YOUR_APP_STORE_LINK";
+        }
+    </script>
+</body>
+</html>
